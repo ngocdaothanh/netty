@@ -149,13 +149,13 @@ public abstract class Router<M, T, RouterLike extends Router<M, T, RouterLike>> 
             MethodlessRouter<T> router = e.getValue();
             listPatterns(method.toString(), router.first().patterns(), methods, paths, targets);
             listPatterns(method.toString(), router.other().patterns(), methods, paths, targets);
-            listPatterns(method.toString(), router.last ().patterns(), methods, paths, targets);
+            listPatterns(method.toString(), router.last() .patterns(), methods, paths, targets);
         }
 
         // For anyMethodRouter
         listPatterns("*", anyMethodRouter.first().patterns(), methods, paths, targets);
         listPatterns("*", anyMethodRouter.other().patterns(), methods, paths, targets);
-        listPatterns("*", anyMethodRouter.last ().patterns(), methods, paths, targets);
+        listPatterns("*", anyMethodRouter.last() .patterns(), methods, paths, targets);
 
         // For notFound
         if (notFound != null) {
@@ -194,7 +194,7 @@ public abstract class Router<M, T, RouterLike extends Router<M, T, RouterLike>> 
         int max = 0;
         for (String e : coll) {
             int length = e.length();
-            if (length > max) max = length;
+            if (length > max) { max = length; }
         }
         return max;
     }

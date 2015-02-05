@@ -28,7 +28,7 @@ public class MethodlessRouter<T> {
 
     public NonorderedRouter<T> first() { return first; }
     public NonorderedRouter<T> other() { return other; }
-    public NonorderedRouter<T> last () { return last ; }
+    public NonorderedRouter<T> last()  { return last ; }
 
     public T notFound() { return notFound; }
 
